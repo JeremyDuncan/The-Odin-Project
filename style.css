@@ -1,0 +1,17 @@
+.container {
+  background-color: rgb(132, 132, 160);
+  font-size: 35;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.one {
+  background-color: rgb(144, 143, 155);
+  color: rgb(45, 214, 214);
+  font-size: 62px;
+}
+
+#recipe {
+  background-color: rgb(144, 143, 155);
+  color: rgb(45, 214, 214);
+  font-size: 32px;
+}
