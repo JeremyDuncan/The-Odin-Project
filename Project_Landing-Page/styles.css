@@ -1,4 +1,30 @@
 body {
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(80, 80, 145);
+}
+.top-container {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  gap: 50%;
+  color: white;
+}
+
+.logo {
+  display: flex;
+
+}
+
+.header-links {
+  display: flex;
+  flex-grow: 0;
+  gap: 10px;
+
 
 }
 
@@ -11,10 +37,14 @@ body {
 }
 
 .top {
-
+  display: flex;
+  height: 100px;
 }
 
-.bottom {
+.bottom-container {
+  color: white;
+  display: flex;
+  gap: 30%
 
 }
 
