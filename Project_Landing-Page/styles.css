@@ -6,7 +6,14 @@ body {
   display: flex;
   flex-direction: column;
   background-color: rgb(80, 80, 145);
+  padding:  0px 70px 50px 70px;
 }
+
+.header {
+  color: rgb(52, 108, 199);
+  display: flex;
+}
+
 .top-container {
   display: flex;
   height: 20%;
@@ -23,17 +30,21 @@ body {
 .header-links {
   display: flex;
   flex-grow: 0;
-  gap: 10px;
-
-
+  gap: 20px;
 }
 
 .left {
-
+  display: flex;
+  flex-direction: column;
 }
 
-.right {
-
+.image {
+  display: flex;
+  width: 350px;
+  height: 105px;
+  background-color: grey;
+  align-items: center;
+  justify-content: center;
 }
 
 .top {
@@ -44,30 +55,34 @@ body {
 .bottom-container {
   color: white;
   display: flex;
-  gap: 30%
-
+  gap: 30%;
+  height: 100%;
+  padding-top: 50px;
 }
 
-.header {
-  color: rgb(52, 108, 199);
-  display: flex;
+.but {
+  border-radius: 5px;
+  width: 70px;
+  font-size: 12px;
+  height: 30px;
+  background-color: rgb(74, 117, 235);
+  color: white;
 }
 
 .main {
   display: flex;
-
 }
+
 .info-box {
   flex: auto;
   padding: 8px;
 }
 
 .quote {
- background-color: grey;
-
+  background-color: grey;
 }
 
 footer {
- background-color: rgb(41, 51, 90);
- color: white;
+  background-color: rgb(41, 51, 90);
+  color: white;
 }
