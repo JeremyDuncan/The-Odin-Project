@@ -1,15 +1,17 @@
 body {
   font-size: 12px;
+  margin: 0;
 }
 
 p {
   margin: 5px;
 }
+
 .header {
   display: flex;
   flex-direction: column;
-  background-color: rgb(47, 47, 83);
-  padding:  0px 70px 50px 70px;
+  background-color: rgb(43, 63, 110);
+  padding: 0px 70px 50px 70px;
 }
 
 .top-container {
@@ -33,9 +35,16 @@ p {
   gap: 20px;
 }
 
-.left {
+.header-left p {
   display: flex;
   flex-direction: column;
+  margin: 0 0 10px 0;
+}
+
+.left p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .image {
@@ -122,15 +131,43 @@ p {
   background-color: rgb(233, 233, 233);
   font-size: 20px;
   font-style: italic;
+  margin: 0;
 }
 
-footer {
-  background-color: rgb(41, 51, 90);
+.footer {
+  padding: 100px;
+  display: flex;
+
+}
+
+.footer-box {
+  padding: 20px;
+  display: flex;
+  gap: 30%;
+  background-color: rgb(74, 117, 235);
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
   color: white;
+}
+
+#white-border {
+  border-color: white;
 }
 
 #large-font {
   font-size: 30px;
   padding: 0px;
   margin: 0;
+}
+
+.copyright {
+  display: flex;
+  background-color: rgb(43, 63, 110);
+  color: white;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 }
