@@ -2,6 +2,9 @@ body {
   font-size: 12px;
 }
 
+p {
+  margin: 5px;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -72,6 +75,7 @@ body {
 }
 
 .topic {
+  padding: 20px;
   display: flex;
   justify-content: center;
   font-size: 24px;
@@ -85,19 +89,48 @@ body {
   justify-content: center;
 }
 
+.box-description {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-text {
+  padding: 0px;
+  height: 100px;
+  width: 125px;
+}
+
 .box {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 2px solid blue;
   height: 100px;
   width: 100px;
 }
 
-.quote {
-  background-color: grey;
+#description {
+  font-size: 10px;
+  margin: 0px;
+  padding: 4px;
+
+}
+
+.quote p {
+  padding: 50px 150px 50px 150px;
+  background-color: rgb(233, 233, 233);
+  font-size: 20px;
+  font-style: italic;
 }
 
 footer {
   background-color: rgb(41, 51, 90);
   color: white;
+}
+
+#large-font {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0;
 }
