@@ -7,6 +7,7 @@ p {
   margin: 5px;
 }
 
+
 .header {
   display: flex;
   flex-direction: column;
@@ -170,4 +171,17 @@ p {
   height: 50px;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 550px) {
+  .footer-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+  #white-border {
+    margin-top: 10px;
+  }
+  .quote p {
+    padding: 50px 50px 50px 50px;
+  }
 }
