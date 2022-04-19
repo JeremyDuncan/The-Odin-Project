@@ -25,6 +25,9 @@ Feel free to create more “helper” functions if you think it would be useful.
 */
 
 function computerPlay() {
+  var result = 0;
+  result = Math.random() * 100;
+  console.log(result);
 //randomly returns rock paper or scissors
 }
 
@@ -34,8 +37,10 @@ function playRound(playerSelection, computerSelection) {
   //returns string that declares a winner. (Not console)
   const playerSelection = "rock";
   const computerSelection = computerPlay();
-}
 
-function game(){
+}
+computerPlay()
+
+function game() {
   playRound()
 }
