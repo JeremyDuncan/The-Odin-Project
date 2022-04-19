@@ -25,15 +25,62 @@ Feel free to create more “helper” functions if you think it would be useful.
 */
 
 function computerPlay() {
-  var result = 0;
-  result = Math.random() * 100;
-  console.log(result);
-//randomly returns rock paper or scissors
+  // choices that the computer has to choose from in game
+  var computerChoice = ["Rock", "Paper", "Scissors"];
+  
+  // randomly generates a number based on max (max = 3 [0-2])
+  var max = 3; // [0-2]
+  var randomNum = Math.floor(Math.random() * max);
+
+  // uses randomly created number to select computerChoice in Array
+  // returns rock paper or scissors
+  return computerChoice[randomNum];
 }
 
 function playRound(playerSelection, computerSelection) {
+
   //make selection case insensitive. ie. Rock rock ROCK RoCk etc.
-  //plays a single round of game.
+  var humanSelection = playerSelection.toLowerCase();
+  var cpuSelection = computerSelection.toLowerCase();
+  var gameResult = "";
+  
+  // determines result based on player and computer selection. 
+  // puts game result into gameResult as string.
+  if (humanSelection == "rock") {
+    if (cpuSelection == "rock") {
+      gameResult = "It's a tie! You both selected Rock!";
+    } else if (cpuSelection == "scissors") {
+        gameResult = "You Win! Rock beats Scissors!";
+    } else if (cpuSelection == "paper") {
+        gameResult = "You Lose! Paper beats Rock!"; 
+    }
+  }
+
+  if (humanSelection == "paper") {
+    if (cpuSelection == "paper") {
+      gameResult = "It's a tie! You both selected Paper!";
+    } else if (cpuSelection == "rock") {
+        gameResult = "You Win! Paper beats Rock!";
+    } else if (cpuSelection == "scissors") {
+        gameResult = "You Lose! Scissors beats Paper!"; 
+    }
+  }
+ 
+  if (humanSelection == "scissors") {
+    if (cpuSelection == "scissors") {
+      gameResult = "It's a tie! You both selected Scissors!";
+    } else if (cpuSelection == "paper") {
+        gameResult = "You Win! Scissors beats Paper!";
+    } else if (cpuSelection == "rock") {
+        gameResult = "You Lose! Rock beats Paper!"; 
+    }
+  }
+
+ return gameResult; //return who won as a string.
+}
+
+
+/*
   //returns string that declares a winner. (Not console)
   const playerSelection = "rock";
   const computerSelection = computerPlay();
@@ -44,3 +91,4 @@ computerPlay()
 function game() {
   playRound()
 }
+*/
