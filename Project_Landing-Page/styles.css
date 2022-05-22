@@ -1,53 +1,68 @@
 body {
   font-size: 12px;
-  margin: 0;
+  display: flex;
+  margin: auto;
 }
-
 p {
   margin: 5px;
 }
 
-
-.header {
+.container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  background-color: rgb(43, 63, 110);
-  padding: 0px 70px 50px 70px;
+  margin: auto;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
+/* HEADER PORTION OF PAGE ============================= */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(43, 63, 110);
+}
 .top-container {
   display: flex;
   height: 20%;
   width: 100%;
-  gap: 50%;
+  text-align: center;
+  align-items: center;
   color: white;
 }
-
 .logo {
   font-weight: bold;
+  margin: auto;
   display: flex;
-
 }
-
 .header-links {
+  margin: auto;
   font-size: 8px;
   display: flex;
-  flex-grow: 0;
-  gap: 20px;
 }
-
+.bottom-container {
+  color: white;
+  background-color: grey;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+}
 .header-left p {
   display: flex;
   flex-direction: column;
-  margin: 0 0 10px 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
-.left p {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
 .image {
   display: flex;
   width: 350px;
@@ -55,23 +70,11 @@ p {
   background-color: grey;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
-
-.top {
-  display: flex;
-  height: 100px;
-}
-
-.bottom-container {
-  color: white;
-  display: flex;
-  gap: 30%;
-  height: 100%;
-  padding-top: 50px;
-}
-
 .but {
   border-radius: 5px;
+  margin: auto;
   width: 70px;
   font-size: 12px;
   height: 30px;
@@ -79,39 +82,36 @@ p {
   color: white;
 }
 
+
+/* MAIN PORTION OF PAGE ========================== */
 .main {
   display: flex;
+  width: 100%;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-
 .topic {
-  padding: 20px;
   display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   font-size: 24px;
   font-weight: bold;
 }
-
 .info-box {
   display: flex;
+  width: 100%;
   gap: 20px;
+  text-align: center;
   align-items: center;
+  text-align: center;
   justify-content: center;
 }
-
-.box-description {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.description-text {
-  padding: 0px;
-  height: 100px;
-  width: 125px;
-}
-
 .box {
   padding: 10px;
   border-radius: 10px;
@@ -119,14 +119,18 @@ p {
   height: 100px;
   width: 100px;
 }
-
-#description {
-  font-size: 10px;
-  margin: 0px;
-  padding: 4px;
-
+.box-description {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
-
+.description-text {
+  padding: 0px;
+  height: 100px;
+  width: 125px;
+}
 .quote p {
   padding: 50px 150px 50px 150px;
   background-color: rgb(233, 233, 233);
@@ -135,12 +139,11 @@ p {
   margin: 0;
 }
 
-.footer {
+/* FOOTER SECTION ============================ */
+footer {
   padding: 100px;
   display: flex;
-
 }
-
 .footer-box {
   padding: 20px;
   display: flex;
@@ -153,19 +156,17 @@ p {
   border-radius: 5px;
   color: white;
 }
-
-#white-border {
-  border-color: white;
-}
-
-#large-font {
-  font-size: 30px;
-  padding: 0px;
+.left p {
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
+.right {
 
+}
 .copyright {
   display: flex;
+  width: 100%;
   background-color: rgb(43, 63, 110);
   color: white;
   height: 50px;
@@ -173,15 +174,60 @@ p {
   justify-content: center;
 }
 
+
+ /* ID CLASSES ======================== */
+#description {
+  font-size: 10px;
+  margin: 0px;
+  padding: 4px;
+}
+#white-border {
+  border-color: white;
+}
+#large-font {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0;
+}
+
+
+ /* RESPONSIVE SECTION =================== */
 @media (max-width: 550px) {
+  .container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  }
+  .top-container {
+    font-size: 2em;
+  }
+  .header-links {
+   font-size: .5em;
+  }
+  #large-font {
+    font-size: 2em;
+  }
   .footer-box {
     flex-direction: column;
     padding: 10px;
+  }
+  footer {
+    padding: 35px;
   }
   #white-border {
     margin-top: 10px;
   }
   .quote p {
-    padding: 50px 50px 50px 50px;
+    padding: 20px 20px 20px 20px;
+  }
+  .header-left {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
   }
 }
