@@ -1,7 +1,9 @@
 body {
   font-size: 12px;
+  height: 100%;
   display: flex;
   margin: auto;
+  border: 10px solid red;
 }
 p {
   margin: 5px;
@@ -9,14 +11,15 @@ p {
 
 .container {
   width: 100%;
+  height: 100%;
   display: flex;
   margin: auto;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 100px;
+  border: 10px solid red;
 }
-
 /* HEADER PORTION OF PAGE ============================= */
 header {
   display: flex;
