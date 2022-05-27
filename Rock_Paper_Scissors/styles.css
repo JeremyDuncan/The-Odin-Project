@@ -1,0 +1,71 @@
+body {
+  background-color: rgb(35, 66, 66);
+}
+.container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(21, 110, 126);
+  border-radius: 20px;
+  border: 5px solid black;
+}
+
+.title {
+  text-align: center;
+  border: 5px solid rgb(219, 3, 3);
+}
+
+.rules {
+  text-align: center;
+  border: 5px solid rgb(219, 3, 3);
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  border: 5px solid rgb(219, 3, 3);
+}
+.results {
+  text-align: center;
+  border: 5px solid rgb(219, 3, 3);
+}
+.selection {
+  background-color: rgb(26, 175, 192);
+  border-radius:30px;
+  border: 15px solid rgb(14, 162, 66);
+  /* == Animation == */
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+
+#rock {
+
+}
+#paper {
+}
+
+#scissors {
+  
+}
+
+
+
+/* === === Animations === ===*/
+/* == Hover Bounce == */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.selection:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+/* === ON CLICK === */
+.selection:active, .selection:focus{
+  background-color: rgb(24, 58, 63);
+}
