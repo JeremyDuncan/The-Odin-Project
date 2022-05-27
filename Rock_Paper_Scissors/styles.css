@@ -9,6 +9,7 @@ body {
   background-color: rgb(21, 110, 126);
   border-radius: 20px;
   border: 5px solid black;
+  min-width: 50px;
 }
 
 .title {
@@ -43,13 +44,16 @@ body {
 
 
 #rock {
-
+  width: 150px;
 }
 #paper {
+  width: 150px;
+  align-self: center;
 }
 
 #scissors {
-  
+  width: 150px;
+  align-self: center;
 }
 
 
@@ -79,5 +83,6 @@ body {
   background-color: rgb(24, 58, 63);
   animation-name: expand;
   animation-timing-function: ease;
+  animation-iteration-count: 1;
   animation-duration: .1s;
 }
