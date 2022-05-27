@@ -3,6 +3,7 @@ body {
 }
 .container {
   color: white;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   background-color: rgb(21, 110, 126);
@@ -54,7 +55,7 @@ body {
 
 
 /* === === Animations === ===*/
-/* == Hover Bounce == */
+/* == ON Hover Bounce == */
 @keyframes bounce {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-10px); }
@@ -65,7 +66,18 @@ body {
   animation-timing-function: ease;
 }
 
-/* === ON CLICK === */
+
+
+/* === ON CLICK Expand === */
+
+@keyframes expand {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1.2); }
+}
 .selection:active, .selection:focus{
   background-color: rgb(24, 58, 63);
+  animation-name: expand;
+  animation-timing-function: ease;
+  animation-duration: .1s;
 }
