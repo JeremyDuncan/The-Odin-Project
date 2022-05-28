@@ -1,5 +1,8 @@
 //========= Rock Paper Scissors Program =====================
-
+var gameCount = 0;
+var playerWins = 0;
+var cpuWins = 0;
+var ties = 0;
 function computerPlay() {
   // choices that the computer has to choose from in game
   var computerChoice = ["Rock", "Paper", "Scissors"];
@@ -26,28 +29,37 @@ function playRound(playerSelection, computerSelection) {
   if (humanSelection == "rock") {
     if (cpuSelection == "rock") {
       gameResult = "It's a tie! You both selected Rock!";
+      ties++
     } else if (cpuSelection == "scissors") {
       gameResult = "You Win! Rock beats Scissors!";
+      playerWins++
     } else if (cpuSelection == "paper") {
       gameResult = "You Lose! Paper beats Rock!";
+      cpuWins++
     }
   }
   if (humanSelection == "paper") {
     if (cpuSelection == "paper") {
       gameResult = "It's a tie! You both selected Paper!";
+      ties++
     } else if (cpuSelection == "rock") {
       gameResult = "You Win! Paper beats Rock!";
+      playerWins++
     } else if (cpuSelection == "scissors") {
       gameResult = "You Lose! Scissors beats Paper!";
+      cpuWins++
     }
   }
   if (humanSelection == "scissors") {
     if (cpuSelection == "scissors") {
       gameResult = "It's a tie! You both selected Scissors!";
+      ties++
     } else if (cpuSelection == "paper") {
       gameResult = "You Win! Scissors beats Paper!";
+      playerWins++
     } else if (cpuSelection == "rock") {
-      gameResult = "You Lose! Rock beats Paper!";
+      gameResult = "You Lose! Rock beats Scissors!";
+      cpuWins++
     }
   }
 
@@ -57,16 +69,22 @@ function playRound(playerSelection, computerSelection) {
 
 // calls game() function that plays 5 games of "Rock Paper Scissors"
 // calls playRound() and computerPlay() 
-function game() {
-  var gameCount = 0;
-
-  while (gameCount < 5) {
-    // asks for player's input, then used as playRound() Parameter.
-    var input = prompt("Select Rock, Paper, or Scissors.");
-    // displays on console who won match.
-    console.log(playRound(input, computerPlay()))
-    gameCount++;
+function game(selection) {
+  var result = "";
+  gameCount++; // increment
+  var input = selection;
+  if (gameCount < 11) {
+    var match = playRound(input, computerPlay())
+    document.getElementById("results").innerHTML =`<span class='announcement'>${match}</span>` ;
   }
+  else {
+    if (playerWins > cpuWins) {
+      result = "Win!";
+    } else {
+      result = "Lose!"
+    }
+    document.getElementById("results").innerHTML =`<span class='announcement'>GAME OVER You ${result}</span>`;
+    document.getElementById("press-reload").innerHTML = `<div onclick='location.reload()' class='retry'><span class='press'>RETRY</span></div>`;
+  }
+  document.getElementById("counter").innerHTML = `Player wins: ${playerWins} // Computer wins: ${cpuWins} // Ties: ${ties}`;
 }
-
-game()

@@ -6,30 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
-  <!-- <script src="RockPaperScissors.js"></script> -->
+  <script src="RockPaperScissors.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="title">
       <h1>Rock Paper Scissors</h1>
+      <img width="100px" src="./images/rps.svg" />
     </div>
+    <div class="game-board">
     <div class="rules">
       <p>Select Rock Paper or Scissors. May the odds ever be in your favor.</p>
     </div>
-    <div class="results">
-      Game Results
+    <div id="results">
+    </div>
+    <div id="press-reload">
+
     </div>
     <div class="game-container">
-      <div id="rock" class="selection">
+      <div onclick="game('Rock')" id="rock" class="selection">
         <img src="./images/rock.svg" />
       </div>
-      <div id="paper" class="selection">
+      <div onclick="game('Paper')" id="paper" class="selection">
         <img src="./images/paper.svg" />
       </div>
-      <div id="scissors" class="selection">
+      <div onclick="game('Scissors')" id="scissors" class="selection">
         <img src="./images/scissors.svg" />
       </div>
     </div>
+    <div id="score">
+      <span id="counter"></span>
+    </div>
+    </div>
+    <footer> 
+      <div class="name">
+        Jeremy Duncan &copy; 2022
+      </div>
+      <div class="link">
+        <a href="https://github.com/JeremyDuncan">GitHub Profile</a>
+      </div>
+    </footer>
 
   </div>
 </body>
